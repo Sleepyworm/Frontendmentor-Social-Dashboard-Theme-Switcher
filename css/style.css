@@ -31,9 +31,10 @@ body{
 
 .header__toggle{
     margin-left: auto;
+    cursor: pointer;
 }
 
-@media (max-width:71.175rem) {
+@media (max-width:71.875rem) {
     .header{grid-template-columns: 1fr;}
 }
 
@@ -66,7 +67,9 @@ body{
     overflow: hidden;
     position: relative;
 }
-
+label{
+    cursor: pointer;
+}
 .toggle__button {
     display: block;
     position: absolute;
@@ -94,6 +97,7 @@ input[type=radio]{
     width: 50%;
     height: 100%;
     z-index: 1;
+    cursor: pointer;
 }
 
 input[type=radio]:focus ~ .toggle__button{
@@ -103,13 +107,33 @@ input[type=radio]:focus ~ .toggle__button{
 .main__followers{
     display: grid;
     grid-template-columns: 255px 255px 255px 255px;
-    grid-template-rows: 216px;
-    gap: 0 30px;
-    text-align: center;;
+    grid-template-rows: 13.5rem;
+    gap: 0 1.875rem;
+    text-align: center;
+}
+@media (max-width:1150px) {
+    .main__followers{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 326px 326px;
+        grid-template-rows:  255px 255px;
+        gap: 1.875rem;
+    }
+}
+@media (max-width:750px) {
+    .main__followers{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 30px;
+        min-width: 326px;
+    }
 }
 
 .card{
     background-color: hsl(228, 28%, 20%);
+    border-radius: 0.313rem;
     padding: 1.563rem;
 }
 .card__platform{
@@ -167,9 +191,11 @@ input[type=radio]:focus ~ .toggle__button{
 }
 .card__change--up{
     color: hsl(163, 72%, 41%);
+    margin-left: 0.25rem;
 }
 .card__change--down{
     color: hsl(356, 69%, 56%);
+    margin-left: 0.25rem;
 }
 
 
