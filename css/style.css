@@ -100,17 +100,24 @@ input[type=radio]:focus ~ .toggle__button{
     border: 3px solid hsla(230, 17%, 1%, 1);
 }
 
-.followers{
+.main__followers{
     display: grid;
     grid-template-columns: 255px 255px 255px 255px;
     grid-template-rows: 216px;
     gap: 0 30px;
+    text-align: center;;
 }
 
 .card{
     background-color: hsl(228, 28%, 20%);
+    padding: 1.563rem;
 }
-
+.card__platform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.75rem;
+}
 .fb{
     border-top: 4px solid hsl(208, 92%, 53%);
 }
@@ -124,6 +131,47 @@ input[type=radio]:focus ~ .toggle__button{
 .yt{
     border-top: 4px solid hsl(348, 97%, 39%);
 }
+
+.card__icon{
+    margin-right: 8px;
+}
+.card__username{
+    color: hsl(228, 34%, 66%);
+    font-size: 0.75;
+    font-weight: 700;
+}
+.card__count{
+    color: hsl(0, 0%, 100%);
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.125rem;
+    margin-bottom: 0.563rem;
+}
+.card__count--big{
+    font-size: 3.5rem;
+}
+.card__label{
+    color: hsl(228, 34%, 66%);
+    font-size: 0.75;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.313rem;
+    margin: 0 0 1.563rem 0;
+}
+.card__change{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.card__change--up{
+    color: hsl(163, 72%, 41%);
+}
+.card__change--down{
+    color: hsl(356, 69%, 56%);
+}
+
 
 .footer__attribution { 
     font-size: 11px; text-align: center; 
