@@ -201,17 +201,50 @@ input[type=radio]:focus ~ .toggle__button{
     color: hsl(356, 69%, 56%);
     margin-left: 0.25rem;
 }
-
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 48px 0 24px 0;
+}
 .overview__card{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0 1.875rem;
+    grid-template-rows: repeat(2, auto);
+    gap: 1.875rem;
+    padding: 0;
 }
+@media (max-width: 1150px) {
+    .overview__card{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, auto);
+        gap: 1.875rem;
+        min-width: 55rem;
+    }    
+}
+@media (max-width: 950px) {
+    .overview__card{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(4, auto);
+        gap: 30px;
+        min-width: 326px;
+    }    
+}
+@media (max-width: 750px) {
+    .overview__card{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        gap: 1.875rem;
+        min-width: 326px;
+    }    
+}
+
 .card--wrap{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     justify-items: start;
     align-items: center;
     gap: 1.438rem;
@@ -247,7 +280,10 @@ input[type=radio]:focus ~ .toggle__button{
     justify-self: end;
 }
 
-
+.card:hover{
+    background: hsl(228, 25%, 27%);
+    cursor: pointer;
+}
 
 .footer__attribution { 
     font-size: 11px; text-align: center; 
