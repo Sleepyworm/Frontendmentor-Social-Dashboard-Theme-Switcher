@@ -34,7 +34,6 @@ const radioButtons = document.querySelectorAll('.toggle__wrapper input');
   });
 });
 
-  
 const colorModeFromPreferences = () => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches 
         ? 'dark'
@@ -52,5 +51,4 @@ window.matchMedia('(prefers-color-scheme: dark)')
         event.matches ? darkButton.click() : lightButton.click();
       });
       
-// Load the right color on startup - localStorage has precedence
 loadAndUpdateColor();
