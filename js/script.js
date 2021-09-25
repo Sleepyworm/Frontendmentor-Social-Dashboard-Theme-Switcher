@@ -35,15 +35,14 @@ const radioButtons = document.querySelectorAll('.toggle__wrapper input');
 });
 
   
-  const colorModeFromPreferences = () => {
+const colorModeFromPreferences = () => {
     return window.matchMedia('(prefers-color-scheme: dark)').matches 
-                ? 'dark'
-                : 'light' // If preference is set or does not match anything (light is default)
+        ? 'dark'
+        : 'light'
   };
   
 
 const loadAndUpdateColor = () => {
-    // local storage has precendence over the prefers-color-scheme
     const color = colorModeFromLocalStorage() || colorModeFromPreferences();
     color == 'dark' ? darkButton.click() : lightButton.click();
   };
